@@ -1,6 +1,5 @@
-<header>
-    <div class="wrapper">
-
+<header class="header-container">
+    <div class="header-inner">
         <div class="logo">
             <img src="http://localhost/wwf/images/main-logo.png" alt="WWF Logo" width="100px" height="175px">
         </div>
@@ -22,11 +21,11 @@
                 </div>
                 <div class="header-menu">
                     <!-- <nav class="main-menu">
-                        <a href="#">Our Work</a>
-                        <a href="#">Our People</a>
-                        <a href="#">Our News</a>
-                        <a href="#">Our Research</a>
-                    </nav> -->
+                            <a href="#">Our Work</a>
+                            <a href="#">Our People</a>
+                            <a href="#">Our News</a>
+                            <a href="#">Our Research</a>
+                        </nav> -->
                     <nav class="main-nav">
                         <ul class="menu">
                             <li class="has-submenu">
@@ -41,17 +40,18 @@
                             <li><a href="#">Our People</a></li>
                             <li><a href="#">Our News</a></li>
                             <li><a href="#">Our Research</a></li>
+                            <li class="header-action__dropdown"><select name="select-support" id="support-wwf">
+                                    <option value="" selected>SUPPORT WWF </option> <img
+                                        src="http://localhost/wwf/images/arrow-down.png" alt="Arrow">
+                                    <option value="https://www.wwf.org.za/join/">JOIN</option>
+                                    <option value="https://donate.wwf.org.za/">DONATE</option>
+                                    <option value="https://shop.wwfsa.org.za/">SHOP</option>
+                                    <option value="https://donate.wwf.org.za/adoptions">ADOPT</option>
+                                </select>
+                            </li>
                         </ul>
                     </nav>
-                    <div>
-                        <select name="select-support" id="support-wwf">
-                            <option value="" selected>SUPPORT WWF </option> <img src="http://localhost/wwf/images/arrow-down.png" alt="Arrow">
-                            <option value="https://www.wwf.org.za/join/">JOIN</option>
-                            <option value="https://donate.wwf.org.za/">DONATE</option>
-                            <option value="https://shop.wwfsa.org.za/">SHOP</option>
-                            <option value="https://donate.wwf.org.za/adoptions">ADOPT</option>
-                        </select>
-                    </div>
+
                 </div>
                 <hr>
                 <div class="second-menu">
@@ -63,57 +63,90 @@
 
             </div>
         </div>
+</header>
 
 
 
 </header>
 <script>
-function toggleSubmenu(event) {
-    event.preventDefault(); // Prevents the default link behavior
-    const submenu = event.target.nextElementSibling; // Finds the submenu
-    submenu.classList.toggle('show'); // Toggles the 'show' class on the submenu
-}
-
-// Close any open submenu if a click is detected outside the menu
-document.addEventListener('click', function(event) {
-    const isClickInsideMenu = event.target.closest('.main-nav');
-    if (!isClickInsideMenu) {
-        document.querySelectorAll('.submenu').forEach(submenu => {
-            submenu.classList.remove('show');
-        });
+    function toggleSubmenu(event) {
+        event.preventDefault(); // Prevents the default link behavior
+        const submenu = event.target.nextElementSibling; // Finds the submenu
+        submenu.classList.toggle('show'); // Toggles the 'show' class on the submenu
     }
-});
+
+    // Close any open submenu if a click is detected outside the menu
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = event.target.closest('.main-nav');
+        if (!isClickInsideMenu) {
+            document.querySelectorAll('.submenu').forEach(submenu => {
+                submenu.classList.remove('show');
+            });
+        }
+    });
 </script>
 <style>
-    @font-face {
-    font-family: 'WWF';
-    src: url('http://localhost/wwf/fonts/WWF_Font/Fonts/Web_Fonts/WOFF2/WWF.woff2') format('woff2');
-}
-    header {
-        background: #222222;
+    * {
+        margin: 0;
+        padding: 0;
     }
-    .wrapper {
-    display: flex;
-    gap: 10px;
-}
 
-.header {
-     flex-grow: 1;
-      height: 100%;
-}
-.main-menu {
-    padding-top: 20px;
-    width: 80%;
-}
-    .header-socials,
-    .header-menu {
+    @font-face {
+        font-family: 'WWF';
+        src: url('http://localhost/wwf/fonts/WWF_Font/Fonts/Web_Fonts/WOFF2/WWF.woff2') format('woff2');
+    }
+
+    .header-container {
+        background: #222222;
+        width: 100%;
+    }
+
+    .header-inner {
+        width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .logo {
+        width: 5%;
+        flex-grow: 1;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .main-menu {
+        padding-block: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-socials {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        /* padding-bottom: 20px; */
+    }
+    .header-socials {
+        display: flex;
+        justify-content: space-between;
     }
 
+    .main-nav {
+        display: flex;
+    }
+
+    .main-nav > ul > li:last-child{
+        margin-inline-start: auto;
+    }
     .main-menu a {
         text-transform: uppercase;
         font-size: 20px;
@@ -159,94 +192,70 @@ document.addEventListener('click', function(event) {
     }
 
     .second-menu {
-    padding: 10px 0 20px 0;
-}
+        padding: 10px 0 20px 0;
+    }
 
     .second-menu a {
         font-size: 16px;
     }
 
-/* navigation */
-.main-nav .menu {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-}
+    /* navigation */
+    .main-nav .menu {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+    }
 
-.main-nav .menu li {
-    position: relative;
-    margin: 0 15px;
-}
+    .main-nav .menu li {
+        position: relative;
+        margin: 0 15px;
+    }
 
-.main-nav .menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    font-size: 20px;
-    transition: background 0.3s;
-}
+    .main-nav .menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+        font-size: 20px;
+        transition: background 0.3s;
+    }
 
-.main-nav .menu a:hover {
-    background-color: #444;
-    border-radius: 5px;
-}
+    .main-nav .menu a:hover {
+        background-color: #444;
+        border-radius: 5px;
+    }
 
-/* Submenu styling */
-.submenu {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #444;
-    padding: 10px 0;
-    border-radius: 5px;
-    min-width: 150px;
-}
+    /* Submenu styling */
+    .submenu {
+        display: none;
+        /* Initially hidden */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        padding: 10px 0;
+        border-radius: 5px;
+        min-width: 150px;
+    }
 
-.submenu li {
-    margin: 0;
-}
+    .submenu li {
+        margin: 0;
+    }
 
-.submenu a {
-    color: #fff;
-    padding: 10px;
-    display: block;
-    text-align: left;
-}
+    .submenu a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-align: left;
+    }
 
-.submenu a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
+    .submenu a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
 
-/* Submenu visible when .show class is added */
-.has-submenu .submenu.show {
-    display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* Submenu visible when .show class is added */
+    .has-submenu .submenu.show {
+        display: block;
+    }
 </style>
