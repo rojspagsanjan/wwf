@@ -1,0 +1,66 @@
+<div class="filter">
+    <div class="form-group form-group-sm row">
+        <div class="col-md-3"><input type="text" name="Keywords" placeholder="Search by keyword..." class="form-control wwf-field"></div>
+        <div class="col-md-2"><select class="form-control wwf-field" id="month" placeholder="Select A Month">
+                <option class="text-muted">- Filter By Month -</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+            </select>
+        </div>
+        <div class="col-md-2"><select id="year" class="form-control wwf-field">
+                <option>- Filter By Year -</option><!--[-->
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+            </select>
+        </div>
+        <div class="col-md-3"><select id="series" class="form-control wwf-field">
+                <option>- Filter By Series -</option><!--[-->
+                <option value="2105">Article themes</option>
+                <option value="2140">Publication</option><!--]-->
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-sm btn-block btn-primar">SEARCH 
+                <img src="http://localhost/wwf/images/search.png" width="15" height="15"></button></div>
+    </div>
+</div>
+<style>
+       @font-face {
+    font-family: 'WWF';
+    src: url('http://localhost/wwf/fonts/WWF_Font/Fonts/Web_Fonts/WOFF2/WWF.woff2') format('woff2');
+}
+   .wwf-field {
+    background: #525252;
+    border: 1px solid #909090;
+    width: 250px;
+    height: 55px;
+    color: #AEAEAE;
+    border-radius: 3px;
+}
+.filter {
+    background: #222222;
+    padding: 20px;
+}
+
+.form-group.form-group-sm.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+button.btn.btn-sm.btn-block.btn-primar {
+    background: #9E015E;
+    border-radius: 6px;
+    border: 0;
+    color: #fff;
+    width: 200px;
+    height: 55px;
+    font-family: 'WWF';
+    font-size: 18px;
+}
+</style>
