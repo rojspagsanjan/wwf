@@ -7,6 +7,7 @@
             <div class="main-menu">
                 <div class="header-socials">
                     <div class="search-container">
+                        <img src="http://localhost/wwf/images/world.png" alt="Country">
                         <input type="text" class="search-bar" placeholder="Search...">
                         <!-- <span>&#128269;</span> -->
                     </div>
@@ -20,45 +21,45 @@
                     </div>
                 </div>
                 <div class="header-menu">
-                    <!-- <nav class="main-menu">
-                            <a href="#">Our Work</a>
-                            <a href="#">Our People</a>
-                            <a href="#">Our News</a>
-                            <a href="#">Our Research</a>
-                        </nav> -->
                     <nav class="main-nav">
                         <ul class="menu">
                             <li class="has-submenu">
                                 <a href="#" onclick="toggleSubmenu(event)">Our Work</a>
                                 <!-- Submenu -->
                                 <ul class="submenu">
-                                    <li><a href="#">OCEAN</a></li>
-                                    <li><a href="#">LAND</a></li>
-                                    <li><a href="#">WILDLIFE</a></li>
+                                    <li class="submenu-item"><a href="#ocean">OCEAN</a></li>
+                                    <li class="submenu-item"><a href="#land">LAND</a></li>
+                                    <li class="submenu-item"><a href="#wildlife">WILDLIFE</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Our People</a></li>
                             <li><a href="#">Our News</a></li>
                             <li><a href="#">Our Research</a></li>
-                            <li class="header-action__dropdown"><select name="select-support" id="support-wwf">
-                                    <option value="" selected>SUPPORT WWF </option> <img
-                                        src="http://localhost/wwf/images/arrow-down.png" alt="Arrow">
-                                    <option value="https://www.wwf.org.za/join/">JOIN</option>
-                                    <option value="https://donate.wwf.org.za/">DONATE</option>
-                                    <option value="https://shop.wwfsa.org.za/">SHOP</option>
-                                    <option value="https://donate.wwf.org.za/adoptions">ADOPT</option>
-                                </select>
-                            </li>
                         </ul>
+                        <div class="dropdown">
+                            <button class="dropbtn">SUPPORT WWF <img src="http://localhost/wwf/images/arrow-down.png"
+                                    alt="Arrow down"></button>
+                            <div class="dropdown-content">
+                                <a class="zoom-link" href="https://www.wwf.org.za/join/"
+                                    style="background-color: #5e9c1c; color: #ffff">JOIN</a>
+                                <a class="zoom-link" href="https://donate.wwf.org.za/"
+                                    style="background-color: #f78b27; color: #ffff">DONATE</a>
+                                <a class="zoom-link" href="https://shop.wwfsa.org.za/"
+                                    style="background-color: #e41233; color: #ffff">SHOP</a>
+                                <a class="zoom-link" href="https://donate.wwf.org.za/adoptions"
+                                    style="background-color: #FFB812; color: #ffff">ADOPT</a>
+                            </div>
+                        </div>
                     </nav>
 
                 </div>
                 <hr>
                 <div class="second-menu">
-                    <a href="#">Publication</a>
-                    <a href="#">Sub Menu 1</a>
-                    <a href="#">Sub Menu 2</a>
-                    <a href="#">Sub Menu 3</a>
+                    <ul class="second-submenu-ul">
+                        <li class="second-submenu-item"><a href="#publication">PUBLICATION</a></li>
+                        <li class="second-submenu-item"><a href="#submenu1">SUBMENU 1</a></li>
+                        <li class="second-submenu-item"><a href="#submenu2">SUBMENU 2</a></li>
+                    </ul>
                 </div>
 
             </div>
@@ -84,6 +85,31 @@
             });
         }
     });
+
+    const menuItems = document.querySelectorAll('.submenu-item');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove 'active' class from all items
+            menuItems.forEach(i => i.classList.remove('active'));
+
+            // Add 'active' class to the clicked item
+            item.classList.add('active');
+        });
+    });
+
+    const secondmenuItems = document.querySelectorAll('.second-submenu-item');
+
+    secondmenuItems.forEach(item2 => {
+        item2.addEventListener('click', () => {
+            // Remove 'active' class from all items
+            secondmenuItems.forEach(i => i.classList.remove('active'));
+
+            // Add 'active' class to the clicked item
+            item2.classList.add('active');
+        });
+    });
+
 </script>
 <style>
     * {
@@ -111,7 +137,7 @@
     }
 
     .logo {
-        width: 5%;
+        width: 15%;
         flex-grow: 1;
     }
 
@@ -135,6 +161,7 @@
         display: flex;
         justify-content: space-between;
     }
+
     .header-socials {
         display: flex;
         justify-content: space-between;
@@ -142,11 +169,13 @@
 
     .main-nav {
         display: flex;
+        justify-content: space-between;
     }
 
-    .main-nav > ul > li:last-child{
+    .main-nav>ul>li:last-child {
         margin-inline-start: auto;
     }
+
     .main-menu a {
         text-transform: uppercase;
         font-size: 20px;
@@ -174,7 +203,7 @@
         align-items: center;
     }
 
-    select#support-wwf {
+    .dropbtn {
         background: #EF7D00;
         color: #fff;
         width: 180px;
@@ -200,7 +229,8 @@
     }
 
     /* navigation */
-    .main-nav .menu {
+    .main-nav .menu,
+    ul.second-submenu-ul {
         list-style-type: none;
         display: flex;
         padding: 0;
@@ -209,6 +239,7 @@
     .main-nav .menu li {
         position: relative;
         margin: 0 15px;
+        list-style-type: none;
     }
 
     .main-nav .menu a {
@@ -221,7 +252,7 @@
     }
 
     .main-nav .menu a:hover {
-        background-color: #444;
+        /* background-color: #444; */
         border-radius: 5px;
     }
 
@@ -232,7 +263,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #444;
+        background-color: #000000;
         padding: 10px 0;
         border-radius: 5px;
         min-width: 150px;
@@ -250,7 +281,7 @@
     }
 
     .submenu a:hover {
-        background-color: #555;
+        /* background-color: #555; */
         border-radius: 5px;
     }
 
@@ -258,4 +289,80 @@
     .has-submenu .submenu.show {
         display: block;
     }
+
+    .search-container {
+        display: flex;
+        gap: 3%;
+    }
+
+    .submenu-item.active>a,
+    .second-submenu-item.active>a {
+        color: #ef7d00 !important;
+    }
+
+    ul.submenu.show::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid black;
+    }
+
+    li.submenu-item>a:hover {
+        color: #ef7d00;
+    }
+
+    li.submenu-item>a:hover {
+        transform: scale(1.1) rotate(2deg);
+    }
+ 
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    div.header-menu > nav > div > button > img {
+    margin-left: 7px;
+}
+.zoom-link {
+      display: inline-block; 
+      text-decoration: none;
+      padding: 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      transition: transform 0.3s ease; 
+    }
+
+    .zoom-link:hover {
+      transform: scale(1.1);
+    }
+
 </style>
