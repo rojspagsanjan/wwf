@@ -24,7 +24,7 @@
                     <nav class="main-nav">
                         <ul class="menu">
                             <li class="has-submenu">
-                                <a href="#" onclick="toggleSubmenu(event)">Our Work</a>
+                                <a href="#" onclick="toggleSubmenu(event)">Our Work  <img src="http://localhost/wwf/images/arrow-down.png" class="p3" alt="Arrow down"></a>
                                 <!-- Submenu -->
                                 <ul class="submenu">
                                     <li class="submenu-item"><a href="#ocean">OCEAN</a></li>
@@ -32,9 +32,9 @@
                                     <li class="submenu-item"><a href="#wildlife">WILDLIFE</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Our People</a></li>
-                            <li><a href="#">Our News</a></li>
-                            <li><a href="#">Our Research</a></li>
+                            <li><a href="#">Our People <img src="http://localhost/wwf/images/arrow-down.png" alt="Arrow down" class="p3"></a> </li>
+                            <li><a href="#">Our News <img src="http://localhost/wwf/images/arrow-down.png" alt="Arrow down" class="p3"></a></li>
+                            <li><a href="#">Our Research <img src="http://localhost/wwf/images/arrow-down.png" alt="Arrow down" class="p3"></a></li>
                         </ul>
                         <div class="dropdown">
                             <button class="dropbtn">SUPPORT WWF <img src="http://localhost/wwf/images/arrow-down.png"
@@ -65,7 +65,13 @@
             </div>
         </div>
 </header>
-
+<main class="hero-section">
+    <div class="overlay">
+      <h1 class="main-title">LEARN FROM YOUTH CLIMATE CHAMPIONS</h1>
+      <p class="main-desc">Be inspired to take every opportunity that comes <br> along to join the movement for a healthy life on a healthy planet!</p>
+      <a href="#" class="cta-button">FIND OUT MORE</a>
+    </div>
+  </main>
 
 
 </header>
@@ -120,6 +126,10 @@
     @font-face {
         font-family: 'WWF';
         src: url('http://localhost/wwf/fonts/WWF_Font/Fonts/Web_Fonts/WOFF2/WWF.woff2') format('woff2');
+    }
+    @font-face {
+        font-family: 'Roboto';
+        src: url('http://localhost/wwf/fonts/Roboto/Roboto-Black.ttf') format('ttf');
     }
 
     .header-container {
@@ -210,7 +220,7 @@
         height: 50px;
         text-align: center;
         border: none;
-        border-radius: 7px;
+        /* border-radius: 7px; */
         font-size: 17;
         font-weight: 500;
         font-family: 'WWF';
@@ -364,5 +374,44 @@
     .zoom-link:hover {
       transform: scale(1.1);
     }
+    .p3 {
+    padding: 3px;
+}
+main.hero-section {
+    position: relative;
+  height: 90vh;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgb(1 1 1 / 70%) 100%), url(http://localhost/wwf/images/ycc-bootcamp-2023_website-banner--dark-_164894.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: left;
+  justify-content: start;
+}
 
+.overlay {
+    margin-left: 235px;
+    font-family: 'WWF';
+    width: 30%;
+}
+
+h1.main-title {
+    font-size: 75px;
+    font-weight: 100;
+    line-height: 1;
+}
+
+
+p.main-desc {
+    font-size: 20px;
+}
+
+a.cta-button {
+    background: #841F82;
+    color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
 </style>

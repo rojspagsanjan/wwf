@@ -1,0 +1,278 @@
+<footer class="footer">
+    <div class="footer-top">
+        <ul class="footer-top-list">
+            <li class="ocean-footer"><a href="">OCEAN</a></li>
+            <li class="land-footer"><a href="">LAND</a></li>
+            <li class="wildlife-footer"><a href="">WILDLIFE</a></li>
+            <li class="food-footer"><a href="">FOOD</a></li>
+            <li class="climate-footer"><a href="">CLIMATE</a></li>
+            <li class="water-footer"><a href="">WATER</a></li>
+        </ul>
+    </div>
+    <div class="footer-desc">
+        <div class="header-line"></div>
+        <span>We are the world's leading independent conservation organisation</span>
+        <div class="header-line"></div>
+    </div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <div>
+                <img src="http://localhost/wwf/images/main-logo.png" alt="WWF Logo">
+                <p>A future in which people <br>and nature thrive.</p>
+            </div>
+            <div>
+                <div class="address">
+                    <img src="http://localhost/wwf/images/map-pin.png" alt="Map Pin" width="20">
+                    <div>
+                        <p>354 Tanglin Road #02-11, Tanglin</p>
+                        <p>Block Tanglin International Centre</p>
+                        <p>Singapore 247672</p>
+                    </div>
+                </div>
+                <div class="mail">
+                    <img src="http://localhost/wwf/images/mail.png" alt="Mail" width="20">
+                    <a href="mailto:info@wwf.sg">info@wwf.sg</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h3>Our Work</h3>
+                <ul>
+                    <li><a href="#">Oceans</a></li>
+                    <li><a href="#">Land</a></li>
+                    <li><a href="#">Wildlife</a></li>
+                    <li><a href="#">Circular Economy</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Climate & Energy</a></li>
+                    <li><a href="#">Water</a></li>
+                    <li><a href="#">WWF and Business</a></li>
+                    <li><a href="#">All Initiatives</a></li>
+                    <li><a href="#">Our Trusts</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Our People</h3>
+                <ul>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Our Board & Leadership</a></li>
+                    <li><a href="#">Our 2025 Strategy</a></li>
+                    <li><a href="#">Our Award Winners</a></li>
+                    <li><a href="#">Get in Touch</a></li>
+                    <li><a href="#">Our Vacancies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Our Research</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Opinion</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Our News</h3>
+                <ul>
+                    <li><a href="#">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Photos and graphics © WWF or used with permission. Text available under a Creative Commons licence.</p>
+        <div class="social-links">
+            <a href="#"><img src="email-icon.png" alt="Email"></a>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+        </div>
+    </div>
+</footer>
+<style>
+    @font-face {
+        font-family: 'WWF';
+        src: url('http://localhost/wwf/fonts/WWF_Font/Fonts/Web_Fonts/WOFF2/WWF.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url('http://localhost/wwf/fonts/Roboto/Roboto-Black.ttf') format('ttf');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'WWF';
+    }
+
+    .footer-top {
+        background: #393939;
+        list-style-type: none;
+    }
+
+    ul.footer-top-list {
+        display: flex;
+        list-style-type: none;
+        margin: 0 auto;
+        justify-content: center;
+        align-content: center;
+    }
+
+    ul.footer-top-list li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul.footer-top-list li {
+        margin: 1em;
+    }
+
+    li.ocean-footer,
+    li.land-footer,
+    li.wildlife-footer,
+    li.food-footer,
+    li.climate-footer,
+    li.water-footer {
+        padding: 1em;
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1em;
+    }
+
+    li.ocean-footer {
+        background: #00718F;
+    }
+
+    li.land-footer {
+        background: #7B8427;
+    }
+
+    li.wildlife-footer {
+        background: #9A0064;
+    }
+
+    li.climate-footer {
+        background: #743873;
+    }
+
+    li.food-footer {
+        background: #007932;
+    }
+
+    li.water-footer {
+        background: #007476;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-logo {
+        flex: 1 1 200px;
+        color: #ffff;
+    }
+
+    .footer-logo img {
+        margin-bottom: 10px;
+    }
+
+    .footer-logo address {
+        font-style: normal;
+        line-height: 1.6;
+    }
+
+    .footer-links {
+        display: flex;
+        flex: 3 1 600px;
+        gap: 20px;
+    }
+
+    .footer-links div {
+        flex: 1;
+    }
+
+    .footer-links h3 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 0.9em;
+        background: #000000;
+        color: #ffff;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .social-links img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-content, .footer-desc {
+        background: #222222;
+    }
+    .footer-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1em;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer-desc span {
+    text-transform: uppercase;
+}
+.footer-links div h3 {
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.footer-content {
+    padding-top: 2em;
+}
+.footer-logo > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+</style>
