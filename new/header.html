@@ -41,7 +41,14 @@
                 const headerBottom = document.querySelector('.header-bottom');
 
                 if (windowWidth > 1000) {
-                    searchForm.after(navArea);
+                    headerBottom.appendChild(secondaryNav);
+                    headerRight.after(headerLeft);
+                    headerLeft.appendChild(searchForm);
+                    searchForm.after(navArea)
+                    headerRight.appendChild(socialMedia);
+                    socialMedia.after(supportWWF);
+                    headerTop.before(mainLogo);
+
                 } else if (windowWidth > 800) {
                     headerBottom.appendChild(secondaryNav);
 
@@ -229,7 +236,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="main-banner">
                 <img src="../images/ycc-bootcamp-2023_website-banner--dark-_164894.jpg" alt="wwf banner image">
             </div>
@@ -248,6 +255,127 @@
                 </div>
             </div>
         </div>
+
+        <main>Dummy</main>
+
+        <div id="bottom">
+            <div class="wrapper">
+                <div class="bottom_con">
+
+                    <ul class="bottom_circle">
+                        <li><a href="javascript:;" class="blue">Oceans</a></li>
+                        <li><a href="javascript:;" class="olive">Land</a></li>
+                        <li><a href="javascript:;" class="pink">Wildlife</a></li>
+                        <li><a href="javascript:;" class="green">Food</a></li>
+                        <li><a href="javascript:;" class="purple">Climate</a></li>
+                        <li><a href="javascript:;" class="cyan">Water</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_top">
+                <div class="wrapper">
+                    <h2 class="footer_slogan">We are the world's leading independent conservation organisation</h2>
+
+                    <div class="footer_info">
+                        <div class="footer_left">
+                            <div class="footer-logo">
+                                <a href="javascript:;"><img src="../images/main-logo.png" alt="WWF Logo" /></a>
+                                <h2>A future in which people and nature thrive.</h2>
+                            </div>
+        
+                            <ul class="footer-contact">
+                                <li class="address">354 Tanglin Road #02-11, Tanglin Block Tanglin International Centre Singapore 247672</li>
+                                <li class="email">info@wwf.sg</li>
+                            </ul>
+        
+                            <div class="footer_social_media">
+                                <h2>Follow Us</h2>
+        
+                                <ul>
+                                    <li><a href="javascript:;" target="_blank"><img src="../images/email.png" alt="Email"></a> </li>
+                                    <li><a href="http://x.com" target="_blank"><img src="../images/twitter.png" alt="X"></a> </li>
+                                    <li><a href="http://facebook.com" target="_blank"><img src="../images/facebook.png" alt="Facebook"></a></li>
+                                    <li><a href="http://instagram.com" target="_blank"><img src="../images/instagram.png" alt="Instagram"></a></li>
+                                    <li><a href="https://linkedin.com/" target="_blank"><img src="../images/linkedin.png" alt="LinkedIn"></a></li>
+                                    <li><a href="https://youtube.com/" target="_blank"><img src="../images/youtube.png" alt="YouTube"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="footer_menu">
+                            <h2>Our Work</h2>
+        
+                            <ul class="foot_nav">
+                                <li><a href="javascript:;">Ocean</a></li>
+                                <li><a href="javascript:;">Land</a></li>
+                                <li><a href="javascript:;">Wildlife</a></li>
+                                <li><a href="javascript:;">Food</a></li>
+                                <li><a href="javascript:;">Climate & Energy</a></li>
+                                <li><a href="javascript:;">Water</a></li>
+                                <li><a href="javascript:;">WWF and Business</a></li>
+                                <li><a href="javascript:;">All Initiatives</a></li>
+                                <li><a href="javascript:;">Our trusts</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer_menu">
+                            <h2>Our People</h2>
+        
+                            <ul class="foot_nav">
+                                <li><a href="javascript:;">Our history</a></li>
+                                <li><a href="javascript:;">Our board & leadership</a></li>
+                                <li><a href="javascript:;">Our 2025 strategy</a></li>
+                                <li><a href="javascript:;">Our award winners</a></li>
+                                <li><a href="javascript:;">Get in touch</a></li>
+                                <li><a href="javascript:;">Our vacancies</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer_menu">
+                            <h2>Our Research</h2>
+        
+                            <ul class="foot_nav">
+                                <li><a href="javascript:;">Blog</a></li>
+                                <li><a href="javascript:;">News</a></li>
+                                <li><a href="javascript:;">Opinion</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer_menu">
+                            <h2>Our News</h2>
+        
+                            <ul class="foot_nav">
+                                <li><a href="javascript:;">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <div class="wrapper">
+                    <div class="fbot_con">
+                        <ul class="fbot_link">
+                            <li><a href="javascript:;">SA Coronavirus website</a></li>
+                            <li><a href="javascript:;">Contact Us</a></li>
+                            <li><a href="javascript:;">Vacancies</a></li>
+                            <li><a href="javascript:;">Access to information</a></li>
+                            <li><a href="javascript:;">Privacy</a></li>
+                        </ul>
+
+                        <div class="copyright">
+                            <span>Photos and graphics &copy; WWF or used with permission. Text available under a
+                                <strong>Creative Commons licence</strong></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 </body>

@@ -189,3 +189,68 @@ header{padding: 0 10px; background:#222222;z-index: 10;position: fixed;width: 10
 .breadcrumb li:not(:last-child):after {content:url('../images/arrow-right.png'); display: inline-block; vertical-align: middle;line-height: 17px;margin: -4px 10px 0 14px;}
 	.breadcrumb li a { color: #fff; font-family: var(--secondary-font);font-size: 20px;line-height: 23px;font-weight: 100;}
 	.breadcrumb li a:hover {text-decoration: underline;}
+
+	main {min-height: 550px;}
+
+#bottom {background:#393939; padding: 0 15px;}
+.bottom_con {padding: 36px 10px 0;min-height: 170px;}
+.bottom_circle {text-align: center;display: flex;justify-content: space-between;column-gap: 25px;width: 100%;}
+	.bottom_circle li {display: inline-block;vertical-align: middle;margin: 0 7px 10px;}
+	.bottom_circle li a {display: block;width: 105px;height: 105px;background: #ef7d00;border-radius: 80px;text-align: center;line-height: 105px;text-transform: uppercase;color: #fff;font-size: 28px;}
+
+	.bottom_circle li a.blue {background:#00718f;}
+	.bottom_circle li a.olive {background:#7a8426;}
+	.bottom_circle li a.pink {background:#9a0064;}
+	.bottom_circle li a.green {background:#017932;}
+	.bottom_circle li a.purple {background:#743873;}
+	.bottom_circle li a.cyan {background:#007376;}
+
+	.bottom_circle li a:hover {background:#ef7d00;}
+
+	/* Footer Style */
+footer {}
+	.footer_top {background: #222; padding: 0 15px;color: #fff;min-height: 669px;text-align: center;}
+	.footer_slogan {font-size: 35px;text-transform: uppercase;text-align: center;padding: 20px 30px 20px;display: inline-block;margin: 56px auto 46px;position: relative;letter-spacing: 1.5px;}
+	.footer_slogan:before, .footer_slogan:after {content: "";width: 120px;height: 2px;background: #fff;display: inline-block;vertical-align: middle;position: absolute;top: 50%;}
+	.footer_slogan:before {left: -120px;}
+	.footer_slogan:after {right: -120px;}
+
+	.footer-logo {display: block; clear: both;overflow: hidden;margin: 0 0 33px;}
+	.footer-logo a {float: left;width: 100px;}
+	.footer-logo h2 {font-size: 22px;line-height: 27px;display: inline-block;width: 190px;margin: 27px 0 0 16px;letter-spacing: 1.5px;}
+
+.footer-contact {font-family: var(--secondary-font);font-size: 16px;font-weight: 300;display: block;margin: 0 0 21px;}
+.footer-contact li {position: relative;padding: 0 0 0 37px;font-size: 16px;line-height: 36px;}
+.footer-contact li.address {margin: 0 0 10px;}
+.footer-contact li.address:before {content:url('../images/map-pin.png'); position:absolute; top:5px; left:0;}
+.footer-contact li.email {}
+.footer-contact li.email:before {content:url('../images/mail.png'); position:absolute; top:6px; left:0;}
+
+	.footer_social_media {}
+	.footer_social_media h2 {font-size: 22px;text-transform: uppercase;display: block;margin: 0 0 31px;}
+	.footer_social_media ul {display: block;margin: 0 auto 15px;}
+	.footer_social_media ul li{ display:inline-block; vertical-align:middle;margin: 0 4px 0;}
+	.footer_social_media ul li a{ display: block; background: #222222;border-radius: 50px;}
+	.footer_social_media ul li a:hover{ animation: 1s pulse; }
+	.footer_social_media ul li:first-child{ padding-right: 0;}
+
+.footer_info {display: flex;justify-content: space-between;column-gap: 25px;text-align: left;}
+
+.footer_left {display: block;width: 320px;}
+
+.footer_menu {}
+.footer_menu h2 {font-size: 22px;text-transform: uppercase;display: block;margin: 0 auto 22px;}
+
+.foot_nav {}
+.foot_nav li {display: block;margin: 0 auto 12px;}
+.foot_nav li a {font-size: 17px;line-height: 27px;font-family: var(--secondary-font);color: #fff;display: block;font-weight: 100;}
+.foot_nav li a:hover {text-decoration: underline;}
+
+.footer_bottom {background: #000;color: #fff;font-size: 14px;font-family: var(--secondary-font);text-align: center;}
+	.fbot_con {padding: 19px 10px 0px;min-height: 86px;display: block;}
+	.fbot_link {display: inline-block;vertical-align: middle;margin: 0 auto;line-height: 25px;}
+	.fbot_link li {display: inline-block;vertical-align: middle;margin: 0 2px;line-height: 25px;}
+	.fbot_link li a {color: #969696;font-size: 15px;display: inline-block;padding: 0 6px;font-weight: 600;}
+	.fbot_link li a:hover {text-decoration: underline;}
+
+.copyright {line-height: 25px;color: #969696;font-size: 12px;}
