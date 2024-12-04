@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="../css/hamburgers.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Responsive Style -->
+    <link rel="stylesheet" href="../css/media.css">
+
+
+    <script>
+        document.addEventListener('click', function (event) {
+            if (event.target.matches('.menu-item-has-children > span')) {
+                event.target.parentElement.classList.toggle('open');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let windowWidth = window.innerWidth;
+
+            function swapThis() {
+                const navArea = document.getElementById('nav_area');
+                const header = document.querySelector('header');
+                const searchForm = document.querySelector('.search_form');
+                const secondaryNav = document.querySelector('.secondary-nav');
+                const headerLeft = document.querySelector('.header_left');
+                const headerRight = document.querySelector('.header_right');
+                const mainLogo = document.querySelector('.main_logo');
+                const logoWrap = document.querySelector('.logo_wrap');
+                const headerTop = document.querySelector('.header-top');
+                const supportWWF = document.querySelector('.support_wwf');
+                const socialMedia = document.querySelector('.social_media');
+                const mainNav = document.querySelector('.main-primary-nav');
+                const headerBottom = document.querySelector('.header-bottom');
+
+                if (windowWidth > 1000) {
+                    searchForm.after(navArea);
+                } else if (windowWidth > 800) {
+                    headerBottom.appendChild(secondaryNav);
+
+                    secondaryNav.before(navArea);
+                    headerRight.after(headerLeft);
+                    socialMedia.after(supportWWF);
+                    headerTop.before(mainLogo);
+
+                    headerLeft.appendChild(searchForm);
+                    headerRight.appendChild(supportWWF);
+                    supportWWF.before(socialMedia);
+                } else {
+                    header.before(navArea);
+                    logoWrap.after(mainLogo);
+                    navArea.before(headerLeft);
+                    mainLogo.after(supportWWF);
+                    mainNav.after(secondaryNav);
+                    secondaryNav.after(searchForm);
+                    searchForm.after(socialMedia);
+                }
+            }
+
+            swapThis();
+
+            window.addEventListener('resize', function () {
+                windowWidth = window.innerWidth;
+                swapThis();
+            });
+
+            const hamburger = document.querySelector(".hamburger");
+            const primaryMenu = document.querySelector('.page_nav');
+            const toggleRightNav = document.querySelector('.toggle_right_nav');
+            const navToggleButton = document.querySelector('.nav_toggle_button');
+            const body = document.body;
+
+            hamburger.addEventListener('click', function () {
+                primaryMenu.classList.add('toggle_right_style');
+                toggleRightNav.classList.add('toggle_right_cont');
+                navToggleButton.classList.toggle('active');
+                hamburger.classList.toggle("is-active");
+                body.classList.add('active');
+            });
+
+            document.querySelectorAll('.toggle_nav_close, .menu_slide_right .hamburger').forEach(function (element) {
+                element.addEventListener('click', function () {
+                    primaryMenu.classList.remove('toggle_right_style');
+
+                    const secondaryMenu = document.querySelector('.secondary_menu'); // Adjust selector as necessary
+                    const toggleSecondaryButton = document.querySelector('.toggle_secondary_button'); // Adjust selector as necessary
+
+                    if (secondaryMenu) {
+                        secondaryMenu.removeAttribute('style');
+                    }
+
+                    if (toggleSecondaryButton) {
+                        toggleSecondaryButton.children[0]?.classList.remove("fa-caret-up");
+                        toggleSecondaryButton.children[0]?.classList.add("fa-caret-down");
+                    }
+
+                    toggleRightNav.classList.remove('toggle_right_cont');
+                    navToggleButton.classList.remove('active');
+                    hamburger.classList.remove("is-active");
+                    body.classList.remove('active');
+                });
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div class="clearfix">
+        <div class="dummy-header-height"></div>
+        <header>
+            <div class="wrapper">
+                <div class="header_container">
+                    <div class="main_logo">
+                        <a href="javascript:;"><img src="../images/main-logo.png" alt="WWF Logo" /></a>
+                    </div>
+
+                    <div class="header-top">
+                        <div class="header-top_con">
+                            <div class="header_right">
+                                <ul class="social_media">
+                                    <li><a href="javascript:;" target="_blank"><img src="../images/email.png"
+                                                alt="Email"></a> </li>
+                                    <li><a href="http://x.com" target="_blank"><img src="../images/twitter.png"
+                                                alt="X"></a> </li>
+                                    <li><a href="http://facebook.com" target="_blank"><img src="../images/facebook.png"
+                                                alt="Facebook"></a></li>
+                                    <li><a href="http://instagram.com" target="_blank"><img
+                                                src="../images/instagram.png" alt="Instagram"></a></li>
+                                    <li><a href="https://linkedin.com/" target="_blank"><img
+                                                src="../images/linkedin.png" alt="LinkedIn"></a></li>
+                                    <li><a href="https://youtube.com/" target="_blank"><img src="../images/youtube.png"
+                                                alt="YouTube"></a></li>
+                                </ul>
+
+                                <div class="support_wwf">
+                                    <a href="javascript:;" class="supp-www-btn">Support WWF</a>
+
+                                    <ul class="supp-wwf-dropdown">
+                                        <li><a href="https://www.wwf.org.za/join/" class="join">JOIN</a> </li>
+                                        <li><a href="https://donate.wwf.org.za/" class="donate">DONATE</a></li>
+                                        <li><a href="https://shop.wwfsa.org.za/" class="shop">SHOP</a></li>
+                                        <li><a href="https://donate.wwf.org.za/adoptions" class="adopt">ADOPT</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="header_left">
+                                <div class="search_form">
+                                    <form action="javascript:;">
+                                        <input type="text" placeholder="Search">
+                                        <button type="submit"><img src="../images/search.png" alt="Search"></button>
+                                    </form>
+                                </div>
+
+                                <div id="nav_area">
+                                    <div class="nav_toggle_button">
+                                        <div class="logo_wrap"></div>
+                                        <div class="toggle_holder">
+                                            <div class="hamburger hamburger--spin-r">
+                                                <div class="hamburger-box">
+                                                    <div class="hamburger-inner"></div>
+                                                </div>
+                                            </div>
+                                            <small>Menu</small>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="toggle_right_nav">
+                                        <nav class="page_nav">
+                                            <div class="wrapper">
+                                                <ul class="main-primary-nav">
+                                                    <li class="menu-item-has-children"><a href="">Our Work</a>
+                                                        <ul>
+                                                            <li><a href="#Ocean">Ocean</a></li>
+                                                            <li><a href="#Land">Land</a></li>
+                                                            <li><a href="#Wildlife">Wildlife</a></li>
+                                                        </ul>
+
+                                                        <span></span>
+                                                    </li>
+                                                    <li><a href="">Our People</a></li>
+                                                    <li><a href="">Our News</a></li>
+                                                    <li><a href="">Our Research</a></li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                        <div class="toggle_nav_close"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-bottom">
+                        <nav class="secondary-nav">
+                            <ul class="main-secondary-nav">
+                                <li><a href="javascript:;">Publication</a></li>
+                                <li><a href="javascript:;">Submenu 1</a></li>
+                                <li><a href="javascript:;">Submenu 2</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </header>
+
+        <div id="banner">
+            <div class="wrapper">
+                <div class="banner_con">
+                    <div class="bnr_info">
+                        <div class="slogan">
+                            <h2>Learn From Youth <span>Climate Champions</span></h2>
+                            <p>Be inspired to take every opportunity that comes <span>along to join the movement for a
+                                    healthy life on a healthy planet!</span> </p>
+                            <a href="javascript:;" class="bnr_btn">Find Out More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-banner">
+                <img src="../images/ycc-bootcamp-2023_website-banner--dark-_164894.jpg" alt="wwf banner image">
+            </div>
+        </div>
+
+        <div id="middle_area">
+            <div class="wrapper">
+                <div class="middle_con">
+                    <h2>Find WWF South Africa's latest research, reports and publications here.</h2>
+
+                    <ul class="breadcrumb">
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Our Research</a></li>
+                        <li><a href="javascript:;">Publication</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
