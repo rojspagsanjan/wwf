@@ -43,6 +43,8 @@ and (max-width : 1000px) {
     
     .bottom_circle {display: block;}
     .bottom_circle li {margin: 0 10px 20px;}
+
+    .box_card_con .box_card {width: 49%;}
     
     .footer_top {padding-block: 25px}
     .footer_slogan {line-height: 45px;padding: 10px;}
@@ -99,6 +101,9 @@ and (max-width : 800px) {
     .logo_slide_right {display:block;float:left;width: calc(100% - 90px);}
     
     .menu_slide_right {display: block;text-align: left;padding: 39px 10px;background: #222;position: relative;}
+    
+
+    .box_card_con .box_card {width: 100%;}
     
     .footer_slogan {font-size: 27px;line-height: 30px;margin: 25px auto 35px;}
     .footer-logo h2 {width: 175px;margin-left: 10px;}

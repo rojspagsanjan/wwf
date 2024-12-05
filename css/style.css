@@ -207,6 +207,22 @@ header{padding: 0 10px; background:#222222;z-index: 10;position: fixed;width: 10
 
 	.bottom_circle li a:hover {background:#ef7d00;}
 
+#bottom2 {padding: 0 15px;}
+	.bottom_con2 {padding: 45px 0;}
+	.box_card_con {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;}
+	.box_card_con .box_card {height: 395px;width: 24%; box-shadow: 0 2px 10px rgba(0,0,0,.2); border-radius: 8px; padding: 0 0 10px; overflow: hidden; position: relative; margin-bottom: 30px;}
+	.bcard_img {display: block; height: 292px; margin: 0 0 30px; }
+	.bcard_img figure {display: block; width: 100%; height: 100%;overflow: hidden;}
+	.bcard_img img { display: block; height:100%; width: 100%; max-width: initial; position: relative; left: 50%; transform: translateX(-50%); object-fit: cover;}
+
+	.box_card > h3 {display: block; font-size: 32px; line-height: 35px; text-align: center; margin: 0 auto 10px;}
+
+	.bcard_content {position: absolute; top: 100%; width: 100%; z-index: 2;background: #fff;overflow: auto;height: 100%;display: flex;flex-direction: column;text-align: center;justify-content: space-between;padding: 20px 0; transition: all 0.3s linear;}
+	.bcard_content h3{font-size: 32px;line-height: 35px;margin: 0 auto 10px;}
+	.bcard_content p {padding: 0 24px;margin: 0 0 20px;text-align: center;font-size: 15px;font-family: var(--secondary-font);line-height: 21px;font-weight: 300;}
+	.bcard_content a.btn {border: 2px solid #151515;border-radius: 4px;color: #151515;width: 110px;margin: 0 auto;letter-spacing: 1.5px;text-transform: uppercase;}
+
+  .box_card_con .box_card:hover .bcard_content {top:0;}
 	/* Footer Style */
 footer {}
 	.footer_top {background: #222; padding: 0 15px;color: #fff;min-height: 669px;text-align: center;}
