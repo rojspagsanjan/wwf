@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>This is Header of the Form</h1>
+            <p>
+                Nascetur platea nisl bibendum ullamcorper velit malesuada lobortis enim nostra, 
+                mattis consequat commodo conubia dictum sed ligula
+            </p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p class="progress-text">1200 People have signed up <span>25%/100%</span></p>
+        </div>
+        <form action="#">
+            <div class="form-grid">
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="First Name">
+                </div>
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Last Name">
+                </div>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Email Address">
+                </div>
+                <div>
+                    <label for="contact-number">Contact Number</label>
+                    <input type="text" id="contact-number" placeholder="Contact Number">
+                </div>
+                <div class="textarea">
+                    <label for="thoughts">Tell Us Your Thought</label>
+                    <textarea id="thoughts" placeholder="Write your thoughts here..."></textarea>
+                </div>
+            </div>
+            <div class="form-footer">
+                <div class="captcha">
+                    <input type="checkbox" id="not-robot">
+                    <!-- <label for="not-robot">I'm not a robot</label> -->
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

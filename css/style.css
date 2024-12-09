@@ -133,7 +133,7 @@ header{padding: 0 10px; background:#222222;z-index: 10;position: fixed;width: 10
 		.page_nav ul.main-primary-nav ul ul {top: 0; left: auto; right: -99.5%; }
 		.page_nav ul.main-primary-nav li:hover > ul, .page_nav ul.main-primary-nav li.menu-item-has-children.open > ul { display: block;}
 		.page_nav ul.main-primary-nav ul a, .page_nav ul.main-primary-nav li.current_page_item ul li a{color:#fff;padding:0 22px !important;margin:0 auto;}
-		.page_nav ul.main-primary-nav ul a:hover,.page_nav ul.main-primary-nav li.current_page_item ul li a:hover, .page_nav ul.main-primary-nav ul li.current_page_item a {transform: scale(1.1) rotate(2deg);color: #ef7d00;}
+		.page_nav ul.main-primary-nav ul a:hover,.page_nav ul.main-primary-nav li.current_page_item ul li a:hover, .page_nav ul.main-primary-nav ul li.current_page_item a {transform: scale(1.1);color: #ef7d00;}
 
 /*third level drop down*/
 .page_nav ul.main-primary-nav ul ul { border-top: 0 none; }
@@ -181,8 +181,8 @@ header{padding: 0 10px; background:#222222;z-index: 10;position: fixed;width: 10
 	.bnr_info .slogan p {color:#fff; font-size: 20px;line-height: 32px;font-family: var(--secondary-font);font-weight: 300;}
 	.bnr_info .slogan p span {display: block;}
 
-	.bnr_info .slogan a.bnr_btn {background: #841F82;color: white;text-decoration: none;padding: 0 20px 2px;display: inline-block;margin-top: 15px; text-transform: uppercase;width: 220px;font-size: 20px;line-height: 65px;border-radius: 6px;text-align: center;}
-	.bnr_info .slogan a.bnr_btn:hover {background: #ef7d00;}
+	.bnr_info .slogan a.bnr_btn, .loadmore_btn {background: #841F82;color: white;text-decoration: none;padding: 0 20px 2px;display: inline-block;margin-top: 15px; text-transform: uppercase;width: 220px;font-size: 20px;line-height: 65px;border-radius: 6px;text-align: center;}
+	.bnr_info .slogan a.bnr_btn:hover, .loadmore_btn:hover {background: #ef7d00;}
 .bnr_info .slogan a.bnr_btn:after {content:"";display:inline-block; width: 0px; height: 0px; border-style: solid; border-width: 9px 6px 0 7px; border-color: #FFFFFF transparent transparent transparent; transform: rotate(-90deg);position: relative;right: -5px;top: -2px;}
 
 #middle_area {background:#393939;padding: 0 10px;}
@@ -276,3 +276,130 @@ footer {}
 	.fbot_link li a:hover {text-decoration: underline;}
 
 .copyright {line-height: 25px;color: #969696;font-size: 12px;}
+
+/* Additional CSS by Rojs */
+.categories { display: flex;padding: 2em;gap: 2%;}
+.pdf-documents {display: grid;grid-template-columns: repeat(3, 1fr); gap: 20px;}
+.filter {height: 512px;background: #222222;width: 20%;}
+.filter-header {
+    color: #fff;
+    font-family: var(--secondary-font);
+    display: flex;
+    justify-content: space-between;
+}
+.filter-body {
+    display: flex;
+    flex-direction: column;
+}
+.filter {padding: 1em;}
+a.loadmore_btn {grid-column: 2;}
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #555;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    height: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    background: #a8d75c;
+    width: 25%;
+    height: 100%;
+}
+
+.progress-text {
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    grid-column: span 2;
+    height: 80px;
+    resize: none;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+}
+
+.captcha input {
+    margin-right: 10px;
+}
+
+button {
+    background: #ff8c00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff6e00;
+}
