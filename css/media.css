@@ -1,5 +1,8 @@
 @media only screen and (max-width : 1100px) {
     .page_nav ul.main-primary-nav li {margin: 0 10px;}
+
+    .filter {width: 275px;}
+    .pdf-documents {width: calc(100% - 295px);}
 }
 
 @media only screen
@@ -63,6 +66,14 @@ and (max-width : 1000px) {
     
     .fbot_con {padding-bottom: 20px;}
     .fbot_link {margin-bottom: 15px;}
+    
+    .categories {display: block;}
+    .filter {display: block;width: 100%;margin: 0 auto 25px;min-height: initial;height: auto;}
+    .filter input, .filter textarea, .filter select {display: inline-block;width: 24%;}
+    .filter-body {flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+    .filter button {flex: 0 0 100%;display: block;}
+    
+    .pdf-documents {display: block;width: 100%;}
 }
 
 @media only screen
@@ -118,6 +129,8 @@ and (max-width : 800px) {
     .footer-contact {width: 290px;}
     
     .footer_menu {margin: 0 0 25px;}
+    
+    .filter input, .filter textarea, .filter select {width: 49%;max-width: 100%;height: 50px;line-height: 50px;margin: 0 auto 15px;}
 }
 
 
@@ -132,6 +145,10 @@ and (max-width : 600px) {
     .footer_info {column-gap: 0;}
     .footer_menu {margin: 0 0 25px;width: 49%;}
     .foot_nav li a {font-size: 15px;line-height: 21px;}
+    
+    .filter input, .filter textarea, .filter select {width: 100%;max-width: 100%;}
+
+    .form-grid {grid-template-columns: 100%;}
 }
 
 

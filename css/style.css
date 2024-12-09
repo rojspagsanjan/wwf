@@ -278,21 +278,22 @@ footer {}
 .copyright {line-height: 25px;color: #969696;font-size: 12px;}
 
 /* Additional CSS by Rojs */
-.categories { display: flex;padding: 2em;gap: 2%;}
-.pdf-documents {display: grid;grid-template-columns: repeat(3, 1fr); gap: 20px;}
-.filter {height: 512px;background: #222222;width: 20%;}
+.categories { display: flex;padding: 20px;justify-content: space-between;}
+.pdf-documents {display: grid;grid-template-columns: repeat(3, 1fr); gap: 20px;width: calc(100% - 345px);}
 .filter-header {
     color: #fff;
     font-family: var(--secondary-font);
     display: flex;
     justify-content: space-between;
+    margin: 0 auto 28px;
 }
 .filter-body {
     display: flex;
     flex-direction: column;
 }
-.filter {padding: 1em;}
+.filter {padding: 27px;width: 315px;min-height: 535px;height: 535px;background: #222222;display: block;}
 a.loadmore_btn {grid-column: 2;}
+
 .form-container {
     background: #fff;
     padding: 20px;
@@ -355,6 +356,19 @@ form {
     display: flex;
     flex-direction: column;
 }
+.form-grid div.textarea {grid-column: 1 / -1;}
+
+.form-container input, .form-container textarea, .form-container select {padding: 10px;border: 1px solid #ddd;border-radius: 5px;font-size: 14px;}
+
+.form-container button {
+	background: #ff8c00;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
 
 textarea {
     grid-column: span 2;
@@ -368,11 +382,18 @@ label {
     color: #333;
 }
 
-input, textarea, select {
-    padding: 10px;
+.filter input, .filter textarea, .filter select {
+    padding: 0 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
+    height: 65px;
+    width: 100%;
+    display: block;
+    max-width: 260px;
+    margin: 0 auto 27px;
+    font-family: var(--secondary-font);
+    line-height: 65px;
 }
 
 .form-footer {
@@ -390,16 +411,24 @@ input, textarea, select {
     margin-right: 10px;
 }
 
-button {
+.filter button {
     background: #ff8c00;
     color: #fff;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    font-family: var(--secondary-font);
+    padding: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
 }
 
-button:hover {
+.filter button:hover {
     background: #ff6e00;
 }
