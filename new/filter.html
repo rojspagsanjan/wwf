@@ -9,27 +9,44 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('click', function (event) {
+                if (event.target.classList.contains('filter-heading-open')) {
+                    document.querySelector('.filter-container').classList.toggle('filter-open');
+                } else if (event.target.classList.contains('toggle_filter-close')) {
+                    document.querySelector('.filter-container').classList.remove('filter-open');
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body>
     <div class="categories">
         <div class="filter">
             <div class="filter-header">
-                <span>Filters</span>
-                <span>Clear All</span>
+                <a href="javascript:;" class="filter-heading-open">Filters</a>
+                <a href="javascript:;" class="filter-heading-clear">Clear All</a>
             </div>
-            <div class="filter-body">
-                <input type="text" placeholder="Search">
-                <select name="month">
-                    <option value="">Month</option>
-                </select>
-                <select name="year">
-                    <option value="">Year</option>
-                </select>
-                <select name="series">
-                    <option value="">Series</option>
-                </select>
-                <button>Apply</button>
+
+            <div class="filter-container">
+                <div class="filter-body">
+                    <input type="text" placeholder="Search">
+                    <select name="month">
+                        <option value="">Month</option>
+                    </select>
+                    <select name="year">
+                        <option value="">Year</option>
+                    </select>
+                    <select name="series">
+                        <option value="">Series</option>
+                    </select>
+                    <button>Apply</button>
+                </div>
+
+                <div class="toggle_filter-close"></div>
             </div>
         </div>
 

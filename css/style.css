@@ -280,17 +280,13 @@ footer {}
 /* Additional CSS by Rojs */
 .categories { display: flex;padding: 20px;justify-content: space-between;}
 .pdf-documents {display: grid;grid-template-columns: repeat(3, 1fr); gap: 20px;width: calc(100% - 345px);}
-.filter-header {
-    color: #fff;
-    font-family: var(--secondary-font);
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 28px;
-}
+.filter-header { color: #fff; font-family: var(--secondary-font); display: flex; justify-content: space-between; margin: 0 auto 28px; }
+.filter-header a {color: #fff;}
 .filter-body {
     display: flex;
     flex-direction: column;
 }
+
 .filter {padding: 27px;width: 315px;min-height: 535px;height: 535px;background: #222222;display: block;}
 a.loadmore_btn {grid-column: 2;}
 
@@ -412,7 +408,7 @@ label {
 }
 
 .filter button {
-    background: #ff8c00;
+    background: #9E015E;
     color: #fff;
     border: none;
     border-radius: 5px;
